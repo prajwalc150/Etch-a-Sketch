@@ -13,14 +13,13 @@ div {
 }*/
 
 #container{
-    display: grid;
+    display: flex;
     height: 500px;
     width: 500px;
     margin: auto;
-    grid-template-columns: repeat(100,1fr);
 }
 
 .test{
     display: flex 1 1 0;
-    height: 5px;
+    /*height: 5px;*/
 }

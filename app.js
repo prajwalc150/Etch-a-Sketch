@@ -1,11 +1,19 @@
 const container = document.querySelector('#container');
-n = 10000;
+
+n = 10;
 
 for(i = 0;i<n;i++){
    let content = document.createElement('div');
-   //content.textContent = `${i}`;
-   content.id = "test";
+   //content.textContent = ` ${i}i `;
+   content.id = `test${i}`;
    container.appendChild(content);
+   for(j=0;j<n;j++){
+    const container2 = document.querySelector(`#test${i}`);
+    let content2 = document.createElement('div');
+    content2.textContent = ` ${j}j `;
+    content2.id= `jest${j}`;
+    container2.appendChild(content2);
+ }
 }
 const test = document.getElementById("container");
 /*
@@ -21,7 +29,7 @@ test.addEventListener("mouseenter", (event) => {
     event.target.style.color = "";
   }, 500);
 }, false);
-*/
+
 // This handler will be executed every time the cursor
 // is moved over a different list item
 test.addEventListener("mouseover", (event) => {
