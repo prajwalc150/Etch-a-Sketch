@@ -1,3 +1,8 @@
 flex box se grid banane ka
 so easily next button add karne ka
 phir 0% opacity jo rgba me se "a" change karne pe ho jaega.
+
+change class names after grid test0 test1 etc to test? 
+descendant to directly apply to all children?
+read aage ke chaps while we hammer this out?
+move button to center or something
