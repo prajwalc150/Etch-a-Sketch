@@ -22,11 +22,12 @@ function generateBoard(n){
       //content2.textContent = ` ${j}j `;
       content2.id= `jest${i},${j}`;
       content2.classList.add("jest");
+      content2.style.opacity = 0.1;  
       container2.appendChild(content2);
-      document.getElementById(`jest${i},${j}`).style.width = `${m}px`;  
+      document.getElementById(`jest${i},${j}`).style.width = `${m}px`;
+      
     } 
   }
-  console.log(document.getElementById("jest0,0").style.opacity);
 }
 
 function clearBoard(){
@@ -56,8 +57,17 @@ test.addEventListener("mouseenter", (event) => {
 test.addEventListener("mouseover", (event) => {
   // highlight the mouseover target
   
-  //event.target.style.backgroundColor = "orange";
-  event.target.style.backgroundColor = `rgba(${getRndInteger(0,255)},${getRndInteger(0,255)},${getRndInteger(0,255)},0.5)`;
+  
+  event.target.style.backgroundColor = "black";
+  temp = event.target.style.opacity;
+  console.log(typeof(temp));
+  //tempOpacity.slice(0, tempOpacity.length - 1);
+  console.log("okay",(parseInt(temp[temp.length - 1])+1)/10);
+  temp = (parseInt(temp[temp.length - 1])+1)/10;
+  temp = `${temp}`;
+  if(temp != 1)
+  {event.target.style.opacity = temp;}
+  console.log("okay2",typeof(temp));
 })
 
  /* 
@@ -92,3 +102,15 @@ function setCells(){
     generateBoard(cellAmount);
   }
 }
+
+function changeOpacity(){
+document.getElementById("container").style.opacity = 0.5;
+let trial = document.getElementById("container").style.opacity;
+console.log(trial);
+}
+
+
+/*console.log("bruh");
+console.log(container.getAttribute("background-color"));
+console.log("bruh2");
+console.log(getComputedStyle(container,background-color));*/
