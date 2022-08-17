@@ -43,7 +43,10 @@ test.addEventListener("mouseenter", (event) => {
 // is moved over a different list item
 test.addEventListener("mouseover", (event) => {
   // highlight the mouseover target
-  event.target.style.backgroundColor = "orange";})
+  
+  //event.target.style.backgroundColor = "orange";
+  event.target.style.backgroundColor = `rgba(${getRndInteger(0,255)},${getRndInteger(0,255)},${getRndInteger(0,255)},${getRndInteger(1,1000)/1000})`;
+})
 
  /* 
   // reset the color after a short delay
@@ -53,3 +56,7 @@ test.addEventListener("mouseover", (event) => {
 }, false);
 
 */
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
