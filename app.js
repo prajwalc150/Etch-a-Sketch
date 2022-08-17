@@ -5,6 +5,7 @@ const container = document.querySelector('#container');
 //try querySelectorAll for changing bground in future 
 // instead of giving each element an id
 
+generateBoard(5);
 function generateBoard(n){
   for(i = 0;i<n;i++){
     m = 800/n;
@@ -25,6 +26,7 @@ function generateBoard(n){
       document.getElementById(`jest${i},${j}`).style.width = `${m}px`;  
     } 
   }
+  console.log(document.getElementById("jest0,0").style.opacity);
 }
 
 function clearBoard(){
@@ -55,7 +57,7 @@ test.addEventListener("mouseover", (event) => {
   // highlight the mouseover target
   
   //event.target.style.backgroundColor = "orange";
-  event.target.style.backgroundColor = `rgba(${getRndInteger(0,255)},${getRndInteger(0,255)},${getRndInteger(0,255)},0.1)`;
+  event.target.style.backgroundColor = `rgba(${getRndInteger(0,255)},${getRndInteger(0,255)},${getRndInteger(0,255)},0.5)`;
 })
 
  /* 
