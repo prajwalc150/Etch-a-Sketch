@@ -3,7 +3,19 @@ body {
  flex-direction: column;
  text-align: center;
  justify-content: center;
- 
+ /*background-color:aqua ;*/
+}
+
+.big{
+    /*display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;*/
+    height: 800px;
+    width: 800px;
+    margin: auto;
+    border: 5px solid #3882f6;
+    border-radius: 5px;
 }
 
 #container{
